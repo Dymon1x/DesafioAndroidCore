@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">DH Foods</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_prato">Descrição que o prato irá ter</string>
+    <string name="salada">Salada ao molho</string>
+
+    <string name="tony_roma">Tony Roma\'s</string>
+    <string name="restaurante">Restaurante</string>
+    <string name="restaurantepic">res</string>
+
+    <string name="Registrar">Registrar</string>
+    <string name="Nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+
+    <string name="confirmaSenha">Confirmar Senha</string>
+    <string name="Registrar_se">Registrar-se</string>
+    <string name="OU">OU</string>
+    <string name="login">Login</string>
+
+    <string name="horario">Horário</string>
+    <string name="endereco">Endereço</string>
+    <string name="nomeRestaurante">Restaurante</string>
+    <string name="imgRes">Imagem Restaurante</string>
+
+    <string name="restaurantepicture">res</string>
+    <string name="pratos_main">Pratos Principais</string>
+
+</resources>

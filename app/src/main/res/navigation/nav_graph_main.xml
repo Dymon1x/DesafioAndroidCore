@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.desafio.digitalhousefoods.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_restauranteFragment"
+            app:destination="@id/restauranteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restauranteFragment"
+        android:name="com.desafio.digitalhousefoods.fragments.RestauranteFragment"
+        android:label="fragment_restaurante"
+        tools:layout="@layout/fragment_restaurante" >
+        <action
+            android:id="@+id/action_restauranteFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_restauranteFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.desafio.digitalhousefoods.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_restauranteFragment"
+            app:destination="@id/restauranteFragment" />
+    </fragment>
+</navigation>
