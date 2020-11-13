@@ -23,9 +23,6 @@ class DetailFragment : Fragment(){
         view.btn_voltar_prato.setOnClickListener {
            findNavController().navigate(R.id.action_detailFragment_to_restauranteFragment)
         }
-
-
-
         return view
     }
 

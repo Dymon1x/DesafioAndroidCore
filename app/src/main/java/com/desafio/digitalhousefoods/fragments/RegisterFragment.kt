@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.fragment_register.view.*
 
 class RegisterFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,7 +20,6 @@ class RegisterFragment : Fragment() {
         view.btn_register_account.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_mainActivity)
         }
-
         return view
     }
 
