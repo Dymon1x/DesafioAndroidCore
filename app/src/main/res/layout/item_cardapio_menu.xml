@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/restaurante"
                     android:gravity="center"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:textColor="@color/gray"
                     android:textStyle="bold"
                     />

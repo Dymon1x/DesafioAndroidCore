@@ -10,6 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/loginToolbar"
         android:layout_width="match_parent"
+        app:title="@string/app_name"
         android:layout_height="wrap_content"
         app:titleTextColor="@color/white"
         android:background="@color/primary"
@@ -23,6 +24,5 @@
         android:layout_height="match_parent"
         app:navGraph="@navigation/nav_graph"
         />
-
 
 </LinearLayout>

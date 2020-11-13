@@ -25,17 +25,10 @@ class RestauranteFragment : Fragment(), PratosAdapter.OnClickPratosListener {
             savedInstanceState: Bundle?
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_restaurante, container, false)
-//        arguments?.getInt("amount")?.let {
-//            view.imgPrincipal.setImageResource(it)
-//        }
-//
-//        arguments?.getString("nome")?.let {
-//            view.tv_nome_restaurante_card.text = it
-//        }
 
         val reView = view.findViewById<RecyclerView>(R.id.rvPratos)
         reView.adapter = adapter
-        reView.layoutManager = GridLayoutManager(context, 2)
+        reView.layoutManager = GridLayoutManager(context, 3)
         reView.setHasFixedSize(true)
 
         view.btn_voltar.setOnClickListener {
@@ -60,21 +53,18 @@ class RestauranteFragment : Fragment(), PratosAdapter.OnClickPratosListener {
                 )
                 1 -> lista.add(
                         Pratos(
-                                "Salada com molho gengibre",
-                                R.drawable.image4)
+                                "Waffle com frutas",
+                                R.drawable.image3)
                 )
             }
         }
-
 
         return lista
     }
 
     override fun OnClickPratos(position: Int) {
-        val pratos = listaPratos.get(position)
+        val pratos = listaPratos[position]
         adapter.notifyItemChanged(position)
-
-
         findNavController().navigate(R.id.action_restauranteFragment_to_detailFragment)
     }
 

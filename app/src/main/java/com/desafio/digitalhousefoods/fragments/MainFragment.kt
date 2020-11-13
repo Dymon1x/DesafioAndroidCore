@@ -25,11 +25,10 @@ class MainFragment : Fragment(), RestauranteAdapter.OnClickRestauranteListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
-        val recy = view.findViewById<RecyclerView>(R.id.rvRestaurantes)
-        recy.adapter = adapter
-        recy.setHasFixedSize(true)
-
-
+        val reView = view.findViewById<RecyclerView>(R.id.rvRestaurantes)
+        reView.adapter = adapter
+        reView.setHasFixedSize(true)
+        
         return view
     }
 
@@ -43,13 +42,34 @@ class MainFragment : Fragment(), RestauranteAdapter.OnClickRestauranteListener {
 
         for (i in 0..size){
             when(i%4){
-                0 -> lista.add(Restaurante(R.drawable.image1, "Tony Roma's", "Avenida Lavandisca, 717 - Indianópolis, São Paulo", "Fecha ás 22:00"))
-                1 -> lista.add(Restaurante(R.drawable.image4, "Aoyama - Moema", "Alameda Dos Arapanés, 532 - Moema", "Fecha ás 00:00"))
-                2 -> lista.add(Restaurante(R.drawable.image5, "Outback - Moema", "Av. Moaci, 187 - Moema, São Paulo", "Fecha ás 00:00"))
-                3 -> lista.add(Restaurante(R.drawable.image3, "Sí Senõr!", "Alameda juaperi, 626 - Moema", "Fecha ás 01:00"))
+                0 -> lista.add(
+                        Restaurante(
+                                R.drawable.image1, "Tony Roma's",
+                                "Avenida Lavandisca, 717 - Indianópolis, São Paulo",
+                                "Fecha ás 22:00")
+                )
+                1 -> lista.add(
+                        Restaurante
+                        (R.drawable.image4,
+                                "Aoyama - Moema",
+                                "Alameda Dos Arapanés, 532 - Moema",
+                                "Fecha ás 23:00")
+                )
+                2 -> lista.add(
+                        Restaurante(
+                                R.drawable.image5, "Outback - Moema",
+                                "Av. Moaci, 187 - Moema, São Paulo",
+                                "Fecha ás 01:00")
+                )
+                3 -> lista.add(
+                        Restaurante(
+                                R.drawable.image3,
+                                "Sí Senõr!",
+                                "Alameda juaperi, 626 - Moema",
+                                "Fecha ás 02:40")
+                )
             }
         }
-
         return lista
     }
 
@@ -58,10 +78,6 @@ class MainFragment : Fragment(), RestauranteAdapter.OnClickRestauranteListener {
         adapter.notifyItemChanged(position)
 
         val bundle = bundleOf("amount" to restaurante.img, "nome" to restaurante.nome)
-
-
-
-
         findNavController().navigate(R.id.action_mainFragment_to_restauranteFragment, bundle)
 
     }
